@@ -1,4 +1,4 @@
-from flask import Flask 
+from flask import Flask, request 
 
 app = Flask(__name__)
 
@@ -20,3 +20,16 @@ def index():
 @app.route('/departamentos.json')
 def get_departamentos():
     return departamentos
+
+
+#reto 5
+
+@app.route('/newitem', methods=['POST'])
+def post_item():
+    data = request.json
+    departamentos[data["id"]] = {
+        "nombre": data["nombre"],
+        "codigo": data["codigo"]
+    }
+    return 'OK', 201
+
