@@ -18,11 +18,11 @@ from django.urls import path
 from rest_framework import routers
 from django.conf.urls import include
 
-from core.viewsets import PostViewSet
+from core.viewsets import PostViewSet, PostModelViewSet
 from rest_framework.documentation import include_docs_urls
 
 router = routers.DefaultRouter()
-router.register('posts', PostMod)
+router.register('posts', PostViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
