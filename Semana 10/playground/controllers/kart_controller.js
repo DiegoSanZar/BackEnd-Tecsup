@@ -21,7 +21,15 @@ class KarController {
                 .then((data)=>{
                     res.redirect('/api/products')
                 })
+                .catch((err)=>{res.sendStatus(500)})
             })
+    }
+
+    static list(req, res){
+        kartItem.findAll()
+        .then((kart)=>{
+            res.render(__dirname + "/../views/kart.html" )
+        })
     }
 }
 
