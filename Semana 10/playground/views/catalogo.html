@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Catalogito</title>
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+</head>
+<body>
+    <img width="200px" src='https://i2.wp.com/historiasdelahistoria.com/wordpress-2.3.1-ES-0.1-FULL/wp-content/uploads/2015/09/manzana.jpg?fit=580%2C500&ssl=1' />
+    <p>Manzana</p>
+    <a href="#">Comprar</a>
+    <div class="mpbutton"></div>
+ 
+    <script
+    src="https://www.mercadopago.com.pe/integrations/v1/web-payment-checkout.js"
+    data-preference-id='<%= global.id %>'>
+</script>
+
+<!-- <script>
+    // Agrega credenciales de SDK
+      const mp = new MercadoPago('TEST-b1f9f0fc-3e2f-47c4-b17d-d5b6e9837c62', {
+            locale: 'es-PE'
+      });
+    
+      // Inicializa el checkout
+      mp.checkout({
+          preference: {
+              id: '<%= global.id %>'
+          },
+          render: {
+                container: '.mpbutton', // Indica el nombre de la clase donde se mostrará el botón de pago
+                label: 'Pagar', // Cambia el texto del botón de pago (opcional)
+          }
+    });
+    </script> -->
+    
+
+    
+
+    
+</body>
+</html>
