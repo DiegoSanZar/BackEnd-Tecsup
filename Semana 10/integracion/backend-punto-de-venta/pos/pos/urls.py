@@ -23,3 +23,5 @@ urlpatterns = [
     path('login', LoginAPI.as_view()),
     path('mesa', MesaAPI.as_view())
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document:root=settings.MEDIA_URL)

@@ -11,3 +11,12 @@ class Mesa(models.Model):
     mesa_cap = models.IntegerField
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
+
+class Plato(models.Model):
+    plato_pre = models.FloatField()
+    plato_nom = models.CharField(max_length=50)
+    plato_img = models.ImageField(upload_to="plato_fotos")
+
+class Category(models.Model):
+    categoria_nom = models.CharField(max_length=50)
+    created_at = models.DateTimeField(auto_now_add=True)
