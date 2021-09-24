@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.controllers.auth_controller import LoginAPI
+from core.controllers.mesa_controller import MesaAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login', LoginAPI.as_view())
+    path('login', LoginAPI.as_view()),
+    path('mesa', MesaAPI.as_view())
 ]
